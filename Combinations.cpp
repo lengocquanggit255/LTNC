@@ -15,7 +15,7 @@ bool compare(string a, string b) {// hàm viết thêm để so sánh cả độ
 
 void combinations(vector<string> arr, int targetSize, string currentStr){
 
-    if ((int)currentStr.size() <= targetSize && count(res.begin(), res.end(), currentStr) == 0 && currentStr != "")
+    if ((int)currentStr.size() <= targetSize && currentStr != "")
     {
         res.push_back(currentStr);
     }
