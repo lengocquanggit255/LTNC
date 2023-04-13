@@ -5,7 +5,7 @@
 using namespace std;
 vector<string> res;
 
-bool compare(string a, string b) {
+bool compare(string a, string b) {// hàm viết thêm để so sánh cả độ dài và bảng chữ cái
     if (a.length() != b.length()) {
         return a.length() > b.length();
     } else {
@@ -19,7 +19,7 @@ void combinations(vector<string> arr, int targetSize, string currentStr){
     {
         res.push_back(currentStr);
     }
-    if((int)currentStr.size() > targetSize)return;
+    if((int)currentStr.size() > targetSize)return;// điều kiện dừng đệ quy
 
     for (int i = 0; i < (int)arr.size(); i++)
     {
