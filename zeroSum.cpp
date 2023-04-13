@@ -5,9 +5,9 @@ using namespace std;
 
 vector<vector<int>> res;
 
-void zeroSum(vector<int> arr, int n){// kiểm tra vector hiện tại đã tồn tại trong res chưa
+void zeroSum(vector<int> arr, int n){
     if(n == 3 &&  (arr[0] + arr[1] + arr[2] == 0)){
-        auto it = find_if(res.begin(), res.end(), [&](const vector<int>& v) {
+        auto it = find_if(res.begin(), res.end(), [&](const vector<int>& v) {// kiểm tra vector hiện tại đã tồn tại trong res chưa
             return v.size() == arr.size() && equal(v.begin(), v.end(), arr.begin());
         });
 
