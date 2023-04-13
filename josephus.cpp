@@ -81,3 +81,36 @@ int main() {
     myList.josePhus(n, m);
     cout << myList.get_list_head()->value;
 }
+
+//Cách 2: dùng chia dư
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     int n; cin >> n;
+//     int k; cin >> k;
+//     vector<int> arr(n);
+//     k--;
+//     for (int i = 0; i < n; i++)
+//     {
+//         arr[i] = i + 1;
+//     }
+
+//     int start = (k + n) % arr.size();
+
+//     while (n != 1)
+//     {
+//         cout << arr[start] << " ";
+//         arr.erase(arr.begin() + start);
+//         n--;
+//         for (int i = 0; i < n; i++)
+//         {
+//             cout << arr[i] << " ";
+//         }
+//         cout << endl;
+//         start = (start + k) % n;
+//     }
+//     cout << arr[0];
+// }
+
