@@ -5,7 +5,7 @@ using namespace std;
 
 vector<vector<int>> res;
 
-void zeroSum(vector<int> arr, int n){
+void zeroSum(vector<int> arr, int n){// kiểm tra vector hiện tại đã tồn tại trong res chưa
     if(n == 3 &&  (arr[0] + arr[1] + arr[2] == 0)){
         auto it = find_if(res.begin(), res.end(), [&](const vector<int>& v) {
             return v.size() == arr.size() && equal(v.begin(), v.end(), arr.begin());
@@ -39,7 +39,7 @@ int main(){
     sort(arr.begin(), arr.end());
     zeroSum(arr, n);
 
-    for (int i = 0; i < (int)res.size(); i++)
+    for (int i = 0; i < (int)res.size(); i++)// sắp xếp lại res cho đúng đề bài
     {
         for (int j = i + 1; j < (int)res.size(); j++)
         {
@@ -56,7 +56,7 @@ int main(){
     }
     
     
-    for (int i = 0; i < (int)res.size(); i++)
+    for (int i = 0; i < (int)res.size(); i++)// in ra
     {
         for (int j = 0; j < 3; j++)
         {
